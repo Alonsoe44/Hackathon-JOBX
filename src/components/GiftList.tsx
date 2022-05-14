@@ -1,3 +1,4 @@
+import CardTitle from "./CardTitle";
 import DescriptionLines from "./DescriptionLines";
 import Etiquette from "./Etiquette";
 
@@ -18,7 +19,7 @@ function GiftListCard({
       onClick={() => action()}
       className="min-w-[24rem]  m-4 h-40 justify-between border-gray-500 border rounded-md hover:bg-purple-200 hover:border-purple-800 p-5 flex flex-col active:scale-[0.99] "
     >
-      <h3 className="text-xl font-semibold">{title}</h3>
+      <CardTitle text={title} />
       <DescriptionLines text={description} />
       <ul className=" flex flex-wrap">
         {etiquettes.map((etiquette) => (
