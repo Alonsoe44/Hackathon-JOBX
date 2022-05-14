@@ -10,24 +10,36 @@ function App() {
           description="A generous list of wishes"
           etiquettes={["Electronics", "Toys", "kids"]}
           key="tunometecabrasaramambiche"
+          action={() => {
+            console.log("click");
+          }}
         />
         <GiftListCard
           title="The special day"
           description="A generous list of wishes"
           etiquettes={["Electronics", "Toys", "kids"]}
           key="esponja"
+          action={() => {
+            console.log("click");
+          }}
         />
         <GiftListCard
           title="The special day"
           description="A generous list of wishes"
           etiquettes={["Electronics", "Toys", "kids"]}
           key="tunometecabrasarmbiche"
+          action={() => {
+            console.log("click");
+          }}
         />
         <GiftListCard
           title="The special day"
           description="A generous list of wishes"
           etiquettes={["Electronics", "Toys", "kids"]}
           key="espnja"
+          action={() => {
+            console.log("click");
+          }}
         />
       </div>
     </div>
