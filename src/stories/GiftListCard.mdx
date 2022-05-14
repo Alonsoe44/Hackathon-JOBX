@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Checkbox } from "./Checkbox";
+import GiftListCard from "../components/GiftList";
+<Meta title="MDX/Checkbox" component={Checkbox} />;
+
+# Checkbox
+
+With `MDX` we can define a story for `Checkbox` right in the middle of our
+markdown documentation.
+
+<Canvas>
+  <Story name="all checkboxes">
+    <form>
+      <GiftListCard
+        title="The special day"
+        description="A generous list of wishes"
+        etiquettes={["Electronics", "Toys", "kids"]}
+        key="tunometecabrasaramambiche"
+      />
+    </form>
+  </Story>
+</Canvas>
