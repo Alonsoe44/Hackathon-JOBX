@@ -1,4 +1,5 @@
 import CardTitle from "./CardTitle";
+import Container from "./Container";
 import DescriptionLines from "./DescriptionLines";
 import Etiquette from "./Etiquette";
 
@@ -21,11 +22,11 @@ function GiftListCard({
     >
       <CardTitle text={title} />
       <DescriptionLines text={description} />
-      <ul className=" flex flex-wrap">
-        {etiquettes.map((etiquette) => (
+      <Container
+        items={etiquettes.map((etiquette) => (
           <Etiquette key={etiquette} text={etiquette} />
         ))}
-      </ul>
+      />
     </button>
   );
 }

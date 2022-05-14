@@ -1,4 +1,4 @@
-import GiftListCard from "./components/GiftList";
+import GiftListCard from "./components/GiftListCard";
 
 function App() {
   return (
@@ -16,8 +16,7 @@ function App() {
         />
         <GiftListCard
           title="The special day"
-          description="324 packages are looking for funding
-  run `npm fund` for details"
+          description="324 packages are looking for funding , can you help? "
           etiquettes={["Electronics", "Toys", "kids"]}
           key="esponja"
           action={() => {
