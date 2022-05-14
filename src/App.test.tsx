@@ -4,6 +4,8 @@ import App from "./App";
 
 test("renders learn react link", () => {
   render(<App />);
-  const linkElement = screen.getByText("Desktop");
+  const linkElement = screen.getByRole("heading", {
+    name: /Get your gifts here/i,
+  });
   expect(linkElement).toBeInTheDocument();
 });
