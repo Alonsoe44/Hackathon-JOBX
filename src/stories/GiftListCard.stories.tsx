@@ -1,4 +1,4 @@
-import GiftListCard from "../components/GiftList";
+import GiftListCard from "../components/GiftListCard";
 export default {
   title: "Gift list card",
   component: GiftListCard,
