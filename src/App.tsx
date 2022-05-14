@@ -7,7 +7,7 @@ function App() {
       <div className="flex shadow flex-wrap lg:flex-nowrap flex-row lg:overflow-x-scroll ">
         <GiftListCard
           title="The special day"
-          description="A generous list of wishes"
+          description="This is a very special list because it's the first chrismas with my new dog, i am counting the hours to go outside and give him his new toy a dinosaur femur"
           etiquettes={["Electronics", "Toys", "kids"]}
           key="tunometecabrasaramambiche"
           action={() => {
@@ -16,7 +16,8 @@ function App() {
         />
         <GiftListCard
           title="The special day"
-          description="A generous list of wishes"
+          description="324 packages are looking for funding
+  run `npm fund` for details"
           etiquettes={["Electronics", "Toys", "kids"]}
           key="esponja"
           action={() => {
@@ -25,7 +26,7 @@ function App() {
         />
         <GiftListCard
           title="The special day"
-          description="A generous list of wishes"
+          description="Happy new year"
           etiquettes={["Electronics", "Toys", "kids"]}
           key="tunometecabrasarmbiche"
           action={() => {
