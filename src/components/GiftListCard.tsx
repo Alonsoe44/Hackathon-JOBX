@@ -3,7 +3,7 @@ import Container from "./Container";
 import DescriptionLines from "./DescriptionLines";
 import Etiquette from "./Etiquette";
 
-interface GiftListCardProps {
+export interface GiftListCardProps {
   title: string;
   description: string;
   etiquettes: string[];
