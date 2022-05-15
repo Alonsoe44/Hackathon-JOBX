@@ -18,7 +18,7 @@ function GiftListCard({
   return (
     <button
       onClick={() => action()}
-      className="min-w-[24rem]  m-4 h-40 justify-between border-gray-500 border rounded-md hover:bg-purple-200 hover:border-purple-800 p-5 flex flex-col active:scale-[0.99] "
+      className="w-full lg:min-w-[24rem] md:max-w-[24rem] m-4 h-40 justify-between border-gray-500 border rounded-md hover:bg-purple-200 hover:border-purple-800 p-5 flex flex-col active:scale-[0.99] "
     >
       <CardTitle text={title} />
       <DescriptionLines text={description} />

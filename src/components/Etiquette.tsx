@@ -3,7 +3,7 @@ interface EtiquetteProps {
 }
 function Etiquette({ text }: EtiquetteProps) {
   return (
-    <li className="bg-green-600 px-4 mr-2  text-sm text-white rounded-2xl text-center">
+    <li className="bg-green-600 px-4 mr-2  inline text-sm text-white rounded-2xl text-center">
       {text}
     </li>
   );
