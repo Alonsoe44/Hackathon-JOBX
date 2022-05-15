@@ -1,0 +1,48 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import DescriptionLines from "../components/DescriptionLines";
+
+<Meta title="Gift list card/DescriptionLines" component="DescriptionLines" />
+
+export const Template = (args) => <DescriptionLines {...args} />;
+
+# Description lines
+
+This is a semantic paragraph with an p tag that works inside cards
+
+- Display texts he receives via props
+- Has dark gray color (To prevent high contrast and eye strain)
+- Just shows 2 lines of text max to keep consistency across all the cards
+- Breaks to long words
+
+<Canvas>
+  <Story
+    name="default"
+    args={{
+      text: "Eyestrain is a common condition that occurs when your eyes get tired from intense use, such as while driving long distances or staring at computer screens and other digital devices. Eyestrain can be annoying.",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="short"
+    args={{
+      text: "Sometimes less is more",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="long"
+    args={{
+      text: "Eyestrain is a common condition that occurs when your eyes get tired from intense use, such as while driving long distances or staring at computer screens and other digital devices. Eyestrain can be annoying. s when your eyes get tired from intense use, such as while driving long distances or staring at computer screens and other digital devices. Eyestrain can be annoying.",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

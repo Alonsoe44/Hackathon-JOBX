@@ -1,0 +1,31 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import Etiquette from "../components/Etiquette";
+
+<Meta title="Gift list card/Etiquette" component="Etiquette" />
+
+export const Template = (args) => <Etiquette {...args} />;
+
+# Etiquette
+
+This is an atomic component with just a li styled tag
+
+- Display texts he receives via props
+- It's an inline element tha contains a single item
+
+<Canvas>
+  <Story name="default" args={{ text: "computer" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="short" args={{ text: "rope" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="long" args={{ text: "Volcanic science kit" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,34 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import CardTitle from "../components/CardTitle";
+
+<Meta title="Gift list card/CardTitle" component="CardTitle" />
+
+export const Template = (args) => <CardTitle {...args} />;
+
+# Card title
+
+This is a semantic heading with an h3 tag
+
+- Display texts he receives via props
+- It's bold and has dark gray color (To prevent high contrast and eye strain)
+
+<Canvas>
+  <Story name="default" args={{ text: "Happy Holidays" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="short" args={{ text: "Greetings" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="long"
+    args={{ text: "This is the very best gift list in the world" }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
