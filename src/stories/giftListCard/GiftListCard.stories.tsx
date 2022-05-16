@@ -1,4 +1,6 @@
-import GiftListCard, { GiftListCardProps } from "../components/GiftListCard";
+import GiftListCard, {
+  GiftListCardProps,
+} from "../../components/giftListCard/GiftListCard";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 export default {
   title: "Components/GiftListCard",

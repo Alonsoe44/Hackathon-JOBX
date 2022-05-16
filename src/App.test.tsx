@@ -1,11 +1,6 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
+test("This is an smoke test to see that the app it's working", () => {
   render(<App />);
-  const linkElement = screen.getByRole("heading", {
-    name: /Get your gifts here/i,
-  });
-  expect(linkElement).toBeInTheDocument();
 });

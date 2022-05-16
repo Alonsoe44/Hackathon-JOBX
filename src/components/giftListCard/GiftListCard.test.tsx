@@ -14,6 +14,7 @@ describe("Given a GiftListCard component", () => {
         title: "Super Happy Card",
       };
       render(<GiftListCard {...GiftListCardProps} />);
+      const expectedEtiquettesTexts = ["fun", "christmas", "happines"];
 
       const foundTitle = screen.getByRole("heading", {
         name: /Super Happy Card/i,
@@ -27,7 +28,7 @@ describe("Given a GiftListCard component", () => {
       expect(foundDescription).toBeInTheDocument();
       expect(
         foundEtiquettes.map((foundEtiquette) => foundEtiquette.textContent)
-      ).toEqual(["fun", "christmas", "happines"]);
+      ).toEqual(expectedEtiquettesTexts);
     });
   });
 
@@ -43,7 +44,6 @@ describe("Given a GiftListCard component", () => {
       render(<GiftListCard {...GiftListCardProps} />);
 
       const foundGiftListCard = screen.getByRole("button");
-
       userEvent.click(foundGiftListCard);
 
       expect(mockAction).toHaveBeenCalled();
