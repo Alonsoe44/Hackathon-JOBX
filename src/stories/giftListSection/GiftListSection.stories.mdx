@@ -1,0 +1,84 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import GiftListSection from "../../components/giftListSection/GiftListSection";
+
+<Meta title="Gift list section/GiftListSection" component="GiftListSection" />
+
+export const Template = (args) => <GiftListSection {...args} />;
+
+# Gift list section
+
+Basically this is a standalone section that shows gift list cards, you can place it anywhere
+you need in the webpage.
+
+As his main functions:
+
+- Display information of a group of gift List cards in a responsive way
+- Gives an action to all his gif list cards childs
+
+Has media querys that let him adapt to any device screen
+in desktop has an horizontal scroll to see all the elements
+in tablets and mobile the elements stack in a list.
+Has placeholder when there is no
+gift list cards and
+
+<Canvas>
+  <Story
+    name="default"
+    args={{
+      cardsData: [
+        {
+          title: "Formidable celebration 🎄",
+          description:
+            "This is a celebration , because we are in holy holy holy days for everyone",
+          etiquettes: ["robot", "magic"],
+        },
+        {
+          title: "All i need 🍎 ",
+          description: "I just like to live in a minimalistic way",
+          etiquettes: ["cellphone", "Guitar", "mackbook"],
+        },
+        {
+          title: "Essentials for my mountain trip ⛰️",
+          description: "When doing extreme sport you must be prepared",
+          etiquettes: ["rope", "water bottle", "special shoes"],
+        },
+        {
+          title: "Master of programming list",
+          description: "Things I need to create a good programing setup",
+          etiquettes: ["mackbook", "mouse", "keyboard"],
+        },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="small"
+    args={{
+      cardsData: [
+        {
+          title: "Formidable celebration 🎄",
+          description:
+            "This is a celebration , because we are in holy holy holy days for everyone",
+          etiquettes: ["robot", "magic"],
+        },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="empty"
+    args={{
+      cardsData: [],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -22,13 +22,14 @@ describe("Given a GiftListCard component", () => {
       const foundDescription = screen.getByText(
         "I am a quick description to this card"
       );
-      const foundEtiquettes = screen.getAllByRole("listitem");
+      const foundListItems = screen.getAllByRole("listitem");
+      const foundEtiquettes = foundListItems
+        .map((foundListItem) => foundListItem.textContent)
+        .filter((foundListItem) => (foundListItem as string).length < 15);
 
       expect(foundTitle).toBeInTheDocument();
       expect(foundDescription).toBeInTheDocument();
-      expect(
-        foundEtiquettes.map((foundEtiquette) => foundEtiquette.textContent)
-      ).toEqual(expectedEtiquettesTexts);
+      expect(foundEtiquettes).toEqual(expectedEtiquettesTexts);
     });
   });
 

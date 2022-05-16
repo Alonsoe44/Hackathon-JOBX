@@ -1,0 +1,34 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import SectionTitle from "../../components/giftListSection/sectionTitle/SectionTitle";
+
+<Meta title="Gift list section/SectionTitle" component="SectionTitle" />
+
+export const Template = (args) => <SectionTitle {...args} />;
+
+# Section title
+
+This is a semantic heading with an h2 tag
+
+- Display texts he receives via props
+- It's bold and has dark gray color (To prevent high contrast and eye strain)
+
+<Canvas>
+  <Story name="default" args={{ text: "We give meaning to this times" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="short" args={{ text: "Your welcome" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="long"
+    args={{ text: "This are the very best gifts of the entire world" }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

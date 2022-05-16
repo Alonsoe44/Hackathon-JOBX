@@ -30,7 +30,7 @@ describe("Given a GiftListSection component", () => {
     test("Then it should display all the headings in cards", () => {
       render(<GiftListSection cardsData={cardsData} />);
       const expectedHeadings = [
-        "Gift list",
+        "Gift lists 🎁",
         ...cardsData.map((cardData) => cardData.title),
       ];
 
@@ -69,11 +69,24 @@ describe("Given a GiftListSection component", () => {
       expect(foundEtiquettes).toEqual(expectedEtiquettes);
     });
   });
+
+  describe("When it's rendered and you dont have gift lists", () => {
+    test("Then it should display the NoGiftListCardsPlaceholder component with the 'no cards' text", () => {
+      render(<GiftListSection cardsData={[]} />);
+      const noCardsText =
+        "It look's like you haven't created any gift list yet";
+
+      const foundText = screen.getByRole("listitem");
+
+      expect(foundText).toBeInTheDocument();
+      expect(foundText.textContent).toBe(noCardsText);
+    });
+  });
 });
 
 describe("Given an actionPlaceholder function", () => {
   describe("When it's instanciated", () => {
-    test("It should log in the console 'click", () => {
+    test("It should log in the console 'click'", () => {
       const logSpy = jest.spyOn(console, "log");
       const expectedText = "click";
 

@@ -16,18 +16,17 @@ function GiftListCard({
   action,
 }: GiftListCardProps) {
   return (
-    <button
-      onClick={() => action()}
-      className="w-full lg:min-w-[24rem] md:max-w-[24rem] m-4 border-gray-500 border rounded-md hover:bg-purple-200 hover:border-purple-800 p-5 flex flex-col active:scale-[0.99] "
-    >
-      <CardTitle text={title} />
-      <DescriptionLines text={description} />
-      <Container
-        items={etiquettes.map((etiquette) => (
-          <Etiquette key={etiquette} text={etiquette} />
-        ))}
-      />
-    </button>
+    <li className="w-full lg:min-w-[24rem] md:max-w-[24rem] m-4 border-gray-500 border rounded-md hover:bg-purple-200 hover:border-purple-800 p-5 flex flex-col active:scale-[0.99] ">
+      <button onClick={() => action()} className="text-left">
+        <CardTitle text={title} />
+        <DescriptionLines text={description} />
+        <Container
+          items={etiquettes.map((etiquette) => (
+            <Etiquette key={etiquette} text={etiquette} />
+          ))}
+        />
+      </button>
+    </li>
   );
 }
 
