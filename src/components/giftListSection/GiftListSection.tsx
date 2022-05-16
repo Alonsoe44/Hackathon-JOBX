@@ -15,12 +15,8 @@ function GiftListSection({ cardsData }: GiftListSectionProps) {
       <SectionTitle text="Gift list" />
       <ul className="flex flex-wrap lg:flex-nowrap lg:overflow-x-scroll ">
         {cardsData.map((giftListCardData) => (
-          <li>
-            <GiftListCard
-              {...giftListCardData}
-              action={actionPlaceholder}
-              key={giftListCardData.toString()}
-            />
+          <li key={giftListCardData.title + giftListCardData.description}>
+            <GiftListCard {...giftListCardData} action={actionPlaceholder} />
           </li>
         ))}
       </ul>
