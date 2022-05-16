@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="sm:p-10 ">
       <GiftListSection cardsData={giftListCardData} />
+      <GiftListSection cardsData={[]} />
     </div>
   );
 }

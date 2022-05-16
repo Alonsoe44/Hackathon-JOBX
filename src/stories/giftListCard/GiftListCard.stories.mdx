@@ -5,18 +5,25 @@ import GiftListCard from "../../components/giftListCard/GiftListCard";
 
 export const Template = (args) => <GiftListCard {...args} />;
 
-# Card title
+# Gift list card
 
-This is a semantic heading with an h3 tag
+This component integrates the more atomic one to create a gift list card that has mainly 2 functions
 
-- Display texts he receives via props
-- It's bold and has dark gray color (To prevent high contrast and eye strain)
+- Display the data he receives, it does it in a consistent way keeping a cohesive design
+- Executes an action he receives when it get's clicked
+
+Visually when hovered changes the background color and border into a purple and when it's
+active gets a "push button" effect.
+It's very responsive and works in all devices.
+
+Semantically this is a button because when clicked will execute and action and
+in that way helps text readers know that it's a clickable element
 
 <Canvas>
   <Story
     name="default"
     args={{
-      title: "Aniversary celebration",
+      title: "Aniversary celebration 💘",
       description:
         "For this time i am going all in , and i am spending all the money in that car, and all his accesories",
       etiquettes: ["car", "tires", "cellphone"],
@@ -29,4 +36,35 @@ This is a semantic heading with an h3 tag
   </Story>
 </Canvas>
 
-<Story id="components-giftlistcard--normal" />
+<Canvas>
+  <Story
+    name="full"
+    args={{
+      title: "The soccer dream equipment ⚽",
+      description:
+        "For this time i am going all in with the team, and i am spending all the money in the equipment, and all his accesories",
+      etiquettes: ["car", "tires", "cellphone", "football", "t-shirt", "water"],
+      action: () => {
+        console.log("click");
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="small"
+    args={{
+      title: "My wish",
+      description: "I just need radio",
+      etiquettes: ["radio"],
+      action: () => {
+        console.log("click");
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
