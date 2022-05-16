@@ -23,6 +23,11 @@ const giftListCardData: GiftListCardInterface[] = [
     description: "When doing extreme sport you must be prepared",
     etiquettes: ["rope", "water bottle", "special shoes"],
   },
+  {
+    title: "The extra mile",
+    description: "Sometimes you have to give that last bit",
+    etiquettes: ["heart", "resolution"],
+  },
 ];
 
 export { giftListCardData };
